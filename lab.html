@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instructional Designer Portfolio</title>
+    <title>Lab — Leon Hayes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Modern, clean typography setup and smooth scroll behavior */
@@ -11,124 +11,179 @@
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     </style>
 </head>
-<body class="bg-white text-black p-4 md:p-8">
+<body class="bg-white text-black min-h-screen">
 
-    <header class="mb-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-        
-        <!-- LEFT COLUMN -->
-        <div>
-            <a
-              href="index.html"
-              class="inline-block font-bold hover:text-gray-600 transition-colors mb-20"
-            >← Back to Portfolio</a>
-            
-            <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2">
+    <!-- Main Container Constrained to Max 1200px -->
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8 py-6 md:py-10">
+
+        <!-- Top Navigation Header -->
+        <header class="flex justify-between items-center mb-16 border-b border-gray-100 pb-6">
+            <a href="index.html" class="text-lg md:text-xl font-bold tracking-normal text-black hover:text-gray-600 transition-colors flex items-center space-x-2">
+                <span class="text-base font-normal">&larr;</span>
+                <span>Back to Portfolio</span>
+            </a>
+            <nav class="flex space-x-8 text-sm font-medium items-center">
+                <a href="index.html#work" class="hover:text-gray-600 transition-colors py-1">Work</a>
+                <a href="lab.html" class="font-bold text-black border-b-2 border-black py-1">Lab</a>
+                <a href="about.html" class="hover:text-gray-600 transition-colors py-1">About</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="mb-20 max-w-2xl">
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-3">
                 You made it to the <span class="italic font-serif font-normal text-gray-700">Interactive</span> Lab!
-            </h2>
+            </h1>
             
             <p class="text-xl font-serif text-gray-700 tracking-tight mb-4">
                 A playground for quick-turnaround, modular assets built for modern web learning.
             </p>
             
-            <p class="text-base text-gray-600 max-w-md mb-8">
+            <p class="text-base text-gray-600 mb-8 leading-relaxed">
                 Be careful, don't have too much FUN!
             </p>
             
-            <a href="hitmeup.html" class="inline-block bg-black text-white px-6 py-2.5 text-sm font-medium hover:bg-gray-800 transition-colors">
+            <a href="hitmeup.html" class="inline-block bg-black text-white px-6 py-3 text-sm font-medium hover:bg-gray-800 transition-colors">
                 Hit Me Up
             </a>
-        </div> <!-- LEFT COLUMN END -->
+        </section>
 
-        <!-- RIGHT COLUMN -->
-        <div class="flex flex-col md:items-end">
-            <nav class="flex items-center">
-                <span class="text-sm font-mono text-gray-500">Interactive Lab</span>
-            </nav>
-        </div> <!-- RIGHT COLUMN END -->
+                <!-- Lab Showcase Section -->
+        <section class="border-t border-gray-200 pt-16 mb-24 space-y-28">
+            
+            <!-- Project 1: American Gothic Challenge -->
+            <div class="border-b border-gray-100 pb-16">
+                <!-- Media Frame -->
+                <div class="relative w-full aspect-[16/9] max-w-[850px] mx-auto border border-gray-200 mb-6 bg-black">        
+                    <iframe 
+                        src="https://leon3525.github.io/American-Gothic-Challenge/American_Gothic_Challenge_Export/index.html" 
+                        class="absolute top-0 left-0 w-full h-full border-none" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Tags & Title Below Media -->
+                <div class="max-w-[850px] mx-auto">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="border border-black px-2 py-0.5 text-[10px] uppercase font-bold">2026</span>
+                        <span class="border border-black px-2 py-0.5 text-[10px] uppercase font-bold">Camtasia</span>
+                        <span class="border border-black px-2 py-0.5 text-[10px] uppercase font-bold">Interactive</span>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-tight text-black">American Gothic Challenge</h2>
+                </div>
+            </div>
+
+            <!-- Project 2: Retro Style Quiz -->
+            <div class="border-b border-gray-100 pb-16">
+                <!-- Media Frame -->
+                <div class="relative w-full aspect-[16/9] max-w-[850px] mx-auto border border-gray-200 mb-6 bg-black">
+                    <iframe 
+                        src="https://Leon3525.github.io/play-fetch-with-max/" 
+                        class="absolute top-0 left-0 w-full h-full border-none" 
+                        title="Play Fetch With Max Quiz Game">
+                    </iframe>
+                </div>
+
+                <!-- Tags & Title Below Media -->
+                <div class="max-w-[850px] mx-auto">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="border border-black px-2 py-0.5 text-[10px] uppercase font-bold">2026</span>
+                        <span class="border border-black px-2 py-0.5 text-[10px] uppercase font-bold">HTML</span>
+                        <span class="border border-black px-2 py-0.5 text-[10px] uppercase font-bold">Quiz</span>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-tight text-black">Retro Style Quiz</h2>
+                </div>
+            </div>
+
+            <!-- Additional Lab Grid Items -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
+                
+                <div class="flex flex-col">
+                    <div class="bg-gray-50 border border-gray-200 aspect-square w-full p-6 flex flex-col justify-between mb-4">
+                        <div class="text-center my-auto">
+                            <span class="text-xs font-mono text-gray-400 block mb-2">[Interactive HTML Widget]</span>
+                            <p class="text-xs text-gray-500 italic">This box can run native HTML/JS code directly on the page.</p>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-bold text-black">Custom Interactive Graphic</h3>
+                    <p class="text-xs text-gray-600 mt-1 leading-relaxed">Lightweight, accessible web graphics built natively with HTML5/Tailwind.</p>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="bg-gray-50 border border-gray-200 aspect-square w-full mb-4 overflow-hidden relative">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                            <span class="text-xs font-mono text-gray-400 block mb-2">[H5P Media Embed]</span>
+                            <p class="text-xs text-gray-500 italic">Responsive iframe layer optimized for branching scenarios or quizzes.</p>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-bold text-black">H5P Multimedia Asset</h3>
+                    <p class="text-xs text-gray-600 mt-1 leading-relaxed">Immersive learning modules featuring robust analytics and interactive branches.</p>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="bg-gray-50 border border-gray-200 aspect-square w-full mb-4 flex items-center justify-center overflow-hidden">
+                        <video class="w-full h-full object-cover" controls preload="metadata" poster="https://via.placeholder.com/400x400?text=Video+Thumbnail">
+                            <source src="your-video-file.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3 class="text-sm font-bold text-black">Motion Graphics & Video Editing</h3>
+                    <p class="text-xs text-gray-600 mt-1 leading-relaxed">Custom branding, dynamic title bumpers, and instructional video production.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+            <!-- Additional Lab Grid Items -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-gray-100">
+                
+                <div class="flex flex-col">
+                    <div class="bg-gray-50 border border-gray-200 aspect-square w-full p-6 flex flex-col justify-between mb-4">
+                        <div class="text-center my-auto">
+                            <span class="text-xs font-mono text-gray-400 block mb-2">[Interactive HTML Widget]</span>
+                            <p class="text-xs text-gray-500 italic">This box can run native HTML/JS code directly on the page.</p>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-bold text-black">Custom Interactive Graphic</h3>
+                    <p class="text-xs text-gray-600 mt-1 leading-relaxed">Lightweight, accessible web graphics built natively with HTML5/Tailwind.</p>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="bg-gray-50 border border-gray-200 aspect-square w-full mb-4 overflow-hidden relative">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                            <span class="text-xs font-mono text-gray-400 block mb-2">[H5P Media Embed]</span>
+                            <p class="text-xs text-gray-500 italic">Responsive iframe layer optimized for branching scenarios or quizzes.</p>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-bold text-black">H5P Multimedia Asset</h3>
+                    <p class="text-xs text-gray-600 mt-1 leading-relaxed">Immersive learning modules featuring robust analytics and interactive branches.</p>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="bg-gray-50 border border-gray-200 aspect-square w-full mb-4 flex items-center justify-center overflow-hidden">
+                        <video class="w-full h-full object-cover" controls preload="metadata" poster="https://via.placeholder.com/400x400?text=Video+Thumbnail">
+                            <source src="your-video-file.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3 class="text-sm font-bold text-black">Motion Graphics & Video Editing</h3>
+                    <p class="text-xs text-gray-600 mt-1 leading-relaxed">Custom branding, dynamic title bumpers, and instructional video production.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-24 pt-8 border-t border-gray-200 text-xs flex justify-between items-center">
+            <p>&copy; 2026 Leon Hayes. Built with curiosity.</p>
+            <a href="#" class="border border-black px-3 py-1 font-medium hover:bg-black hover:text-white transition-all">
+                Back to Top &uarr;
+            </a>
+        </footer>
 
     </div>
-</header>
-
-
-    <section class="border-t border-gray-200 pt-16 mb-24">
-        
-        <h2 class="text-xl font-bold mb-2">American Gothic Challenge</h2>
- <div class="flex space-x-2 mb-6">
-                <span class="border border-black px-2 py-0.5 text-[10px] uppercase font-bold">2026</span>
-                <span class="border border-black px-2 py-0.5 text-[10px] uppercase font-bold">Camtasia</span>
-                <span class="border border-black px-2 py-0.5 text-[10px] uppercase font-bold">Interactive</span>
-            </div>
-            
-        <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; max-width: 1000px; margin: 0 auto;">        
-  <iframe 
-    src="https://leon3525.github.io/American-Gothic-Challenge/American_Gothic_Challenge_Export/index.html" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
-    allowfullscreen>
-  </iframe>
-</div>
-<h2 class="text-xl font-bold mb-2">Retro Style Quiz</h2>
-<div class="flex space-x-2 mb-6">
-                <span class="border border-black px-2 py-0.5 text-[10px] uppercase font-bold">2026</span>
-                <span class="border border-black px-2 py-0.5 text-[10px] uppercase font-bold">HTML</span>
-                <span class="border border-black px-2 py-0.5 text-[10px] uppercase font-bold">Quiz</span>
-            </div>
-            
-<div style="position: relative; width: 100%; aspect-ratio: 16 / 9; max-width: 1000px; margin: 0 auto;">
-  <iframe 
-    src="https://Leon3525.github.io/play-fetch-with-max/" 
-    width="100%" 
-    height="500px" 
-    style="border: none; max-width: 800px; display: block; margin: 0 auto;" 
-    title="Play Fetch With Max Quiz Game">
-</iframe>
-</div>
-
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <div class="flex flex-col">
-                <div class="bg-gray-50 border border-gray-200 aspect-square w-full p-6 flex flex-col justify-between mb-4">
-                    <div class="text-center my-auto">
-                        <span class="text-xs font-mono text-gray-400 block mb-2">[Interactive HTML Widget]</span>
-                        <p class="text-xs text-gray-500 italic">This box can run native HTML/JS code directly on the page.</p>
-                    </div>
-                </div>
-                <h3 class="text-sm font-bold">Custom Interactive Graphic</h3>
-                <p class="text-xs text-gray-600 mt-1">Lightweight, accessible web graphics built natively with HTML5/Tailwind.</p>
-            </div>
-
-            <div class="flex flex-col">
-                <div class="bg-gray-50 border border-gray-200 aspect-square w-full mb-4 overflow-hidden relative">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                        <span class="text-xs font-mono text-gray-400 block mb-2">[H5P Media Embed]</span>
-                        <p class="text-xs text-gray-500 italic">Responsive iframe layer optimized for branching scenarios or quizzes.</p>
-                    </div>
-                </div>
-                <h3 class="text-sm font-bold">H5P Multimedia Asset</h3>
-                <p class="text-xs text-gray-600 mt-1">Immersive learning modules featuring robust analytics and interactive branches.</p>
-            </div>
-
-            <div class="flex flex-col">
-                <div class="bg-gray-50 border border-gray-200 aspect-square w-full mb-4 flex items-center justify-center overflow-hidden">
-                    <video class="w-full h-full object-cover" controls preload="metadata" poster="https://via.placeholder.com/400x400?text=Video+Thumbnail">
-                        <source src="your-video-file.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <h3 class="text-sm font-bold">Motion Graphics & Video Editing</h3>
-                <p class="text-xs text-gray-600 mt-1">Custom branding, dynamic title bumpers, and instructional video production.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <footer class="mt-24 pt-8 border-t border-gray-200 text-xs flex justify-between items-center">
-        <p>&copy; 2026 Leon Hayes. Built with curiosity.</p>
-        <a href="#" class="border border-black px-3 py-1 font-medium hover:bg-black hover:text-white transition-all">
-            Back to Top &uarr;
-        </a>
-    </footer>
 
 </body>
 </html>

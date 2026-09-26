@@ -3,121 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hit Me Up - Portfolio</title>
+    <title>Hit Me Up — Leon Hayes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Modern, clean typography setup and smooth scroll behavior */
         html { scroll-behavior: smooth; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     </style>
 </head>
-<body class="bg-white text-black p-4 md:p-8">
+<body class="bg-white text-black min-h-screen">
 
-    <header class="mb-16">
-        <nav class="flex justify-between items-center">
-            <a href="index.html" class="font-bold hover:text-gray-600 transition-colors mb-20">← Back to Portfolio</a>
-            <span class="text-sm font-mono text-gray-500">Project Intake</span>
-        </nav>
-    </header>
+    <!-- Main Container Constrained to Max 1200px -->
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8 py-6 md:py-10">
 
-    <main class="w-full">
-        <div class="mb-12">
-            <h1 class="text-xl font-bold tracking-tight mb-2">
-                Let's skip the <span class="italic font-serif font-normal text-gray-700">corporate</span> bureaucracy.
-            </h1>
-            <p class="text-base text-gray-600 max-w-md">
-                Tell me a bit about what you want to build, your timeline, and the best way to get back to you. I usually reply within 24 hours.
-            </p>
-        </div>
+        <!-- Top Navigation Header -->
+        <header class="flex justify-between items-center mb-16 border-b border-gray-100 pb-6">
+            <a href="index.html" class="text-lg md:text-xl font-bold tracking-normal text-black hover:text-gray-600 transition-colors flex items-center space-x-2">
+                <span class="text-base font-normal">&larr;</span>
+                <span>Back to Portfolio</span>
+            </a>
+            <nav class="flex space-x-8 text-sm font-medium items-center">
+                <a href="index.html#work" class="hover:text-gray-600 transition-colors py-1">Work</a>
+                <a href="lab.html" class="hover:text-gray-600 transition-colors py-1">Lab</a>
+                <a href="about.html" class="hover:text-gray-600 transition-colors py-1">About</a>
+            </nav>
+        </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Main Content -->
+        <main class="w-full">
             
-            <form onsubmit="event.preventDefault();" class="md:col-span-2 space-y-8">
+            <!-- Hero Heading -->
+            <div class="mb-12 max-w-2xl">
+                <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-3">
+                    Let's skip the <span class="italic font-serif font-normal text-gray-700">corporate</span> bureaucracy.
+                </h1>
+                <p class="text-base text-gray-600 leading-relaxed">
+                    Tell me a bit about what you want to build, your timeline, and the best way to get back to you. I usually reply within 24 hours.
+                </p>
+            </div>
+
+            <!-- Form & Sidebar Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Form Section -->
+                <form onsubmit="event.preventDefault();" class="md:col-span-2 space-y-8">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex flex-col space-y-2">
+                            <label for="name" class="font-mono text-xs uppercase tracking-wider text-gray-500">Your Name</label>
+                            <input type="text" id="name" placeholder="Leon Hayes" class="w-full bg-white border border-gray-200 p-3 text-sm rounded-none focus:outline-none focus:border-black transition-colors" required>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <label for="company" class="font-mono text-xs uppercase tracking-wider text-gray-500">Company / Organization</label>
+                            <input type="text" id="company" placeholder="Independent Studio" class="w-full bg-white border border-gray-200 p-3 text-sm rounded-none focus:outline-none focus:border-black transition-colors">
+                        </div>
+                    </div>
+
                     <div class="flex flex-col space-y-2">
-                        <label for="name" class="font-mono text-xs uppercase tracking-wider text-gray-400">Your Name</label>
-                        <input type="text" id="name" placeholder="Leon Hayes" class="w-full bg-white border border-gray-200 p-3 text-sm rounded-none focus:outline-none focus:border-black transition-colors" required>
+                        <label for="email" class="font-mono text-xs uppercase tracking-wider text-gray-500">Email Address</label>
+                        <input type="email" id="email" placeholder="you@example.com" class="w-full bg-white border border-gray-200 p-3 text-sm rounded-none focus:outline-none focus:border-black transition-colors" required>
                     </div>
+
+                    <div class="flex flex-col space-y-3">
+                        <span class="font-mono text-xs uppercase tracking-wider text-gray-500">What asset are we building?</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <label class="border border-gray-200 p-3 flex items-center space-x-3 cursor-pointer hover:bg-gray-50 transition-colors">
+                                <input type="checkbox" name="asset-type" class="accent-black">
+                                <span class="text-sm">HTML / JS Widget</span>
+                            </label>
+                            <label class="border border-gray-200 p-3 flex items-center space-x-3 cursor-pointer hover:bg-gray-50 transition-colors">
+                                <input type="checkbox" name="asset-type" class="accent-black">
+                                <span class="text-sm">H5P Media Asset</span>
+                            </label>
+                            <label class="border border-gray-200 p-3 flex items-center space-x-3 cursor-pointer hover:bg-gray-50 transition-colors">
+                                <input type="checkbox" name="asset-type" class="accent-black">
+                                <span class="text-sm">Motion Graphics / Video</span>
+                            </label>
+                            <label class="border border-gray-200 p-3 flex items-center space-x-3 cursor-pointer hover:bg-gray-50 transition-colors">
+                                <input type="checkbox" name="asset-type" class="accent-black">
+                                <span class="text-sm">Other</span>
+                            </label>
+                        </div>
+                    </div>
+
                     <div class="flex flex-col space-y-2">
-                        <label for="company" class="font-mono text-xs uppercase tracking-wider text-gray-400">Company / Organization</label>
-                        <input type="text" id="company" placeholder="Independent Studio" class="w-full bg-white border border-gray-200 p-3 text-sm rounded-none focus:outline-none focus:border-black transition-colors">
+                        <label for="timeline" class="font-mono text-xs uppercase tracking-wider text-gray-500">Ideal Timeline Sprint</label>
+                        <select id="timeline" class="w-full bg-white border border-gray-200 p-3 text-sm rounded-none focus:outline-none focus:border-black transition-colors appearance-none cursor-pointer">
+                            <option>Immediate Sprint (1–2 weeks)</option>
+                            <option>Standard Milestone (3–4 weeks)</option>
+                            <option>Just consulting / scoping right now</option>
+                            <option>Other</option>
+                        </select>
                     </div>
-                </div>
 
-                <div class="flex flex-col space-y-2">
-                    <label for="email" class="font-mono text-xs uppercase tracking-wider text-gray-400">Email Address</label>
-                    <input type="email" id="email" placeholder="you@example.com" class="w-full bg-white border border-gray-200 p-3 text-sm rounded-none focus:outline-none focus:border-black transition-colors" required>
-                </div>
-
-                <div class="flex flex-col space-y-3">
-                    <span class="font-mono text-xs uppercase tracking-wider text-gray-400">What asset are we building?</span>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <label class="border border-gray-200 p-3 flex items-center space-x-3 cursor-pointer hover:bg-gray-50 transition-colors">
-                            <input type="checkbox" name="asset-type" class="accent-black">
-                            <span class="text-sm">HTML / JS Widget</span>
-                        </label>
-                        <label class="border border-gray-200 p-3 flex items-center space-x-3 cursor-pointer hover:bg-gray-50 transition-colors">
-                            <input type="checkbox" name="asset-type" class="accent-black">
-                            <span class="text-sm">H5P Media Asset</span>
-                        </label>
-                        <label class="border border-gray-200 p-3 flex items-center space-x-3 cursor-pointer hover:bg-gray-50 transition-colors">
-                            <input type="checkbox" name="asset-type" class="accent-black">
-                            <span class="text-sm">Motion Graphics / Video</span>
-                        </label>
-                        <label class="border border-gray-200 p-3 flex items-center space-x-3 cursor-pointer hover:bg-gray-50 transition-colors">
-                            <input type="checkbox" name="asset-type" class="accent-black">
-                            <span class="text-sm">Other</span>
-                        </label>
+                    <div class="flex flex-col space-y-2">
+                        <label for="details" class="font-mono text-xs uppercase tracking-wider text-gray-500">Project Context & Constraints</label>
+                        <textarea id="details" rows="5" placeholder="Share a few brief details about the learning experience, your raw content assets, or project goals..." class="w-full bg-white border border-gray-200 p-3 text-sm rounded-none focus:outline-none focus:border-black transition-colors resize-none" required></textarea>
                     </div>
-                </div>
 
-                <div class="flex flex-col space-y-2">
-                    <label for="timeline" class="font-mono text-xs uppercase tracking-wider text-gray-400">Ideal Timeline Sprint</label>
-                    <select id="timeline" class="w-full bg-white border border-gray-200 p-3 text-sm rounded-none focus:outline-none focus:border-black transition-colors appearance-none cursor-pointer">
-                        <option>Immediate Sprint (1–2 weeks)</option>
-                        <option>Standard Milestone (3–4 weeks)</option>
-                        <option>Just consulting / scoping right now</option>
-                        <option>Other</option>
-                    </select>
-                </div>
+                    <button type="submit" class="inline-block bg-black text-white px-8 py-3 text-sm font-medium hover:bg-gray-800 transition-colors">
+                        Send Brief
+                    </button>
 
-                <div class="flex flex-col space-y-2">
-                    <label for="details" class="font-mono text-xs uppercase tracking-wider text-gray-400">Project Context & Constraints</label>
-                    <textarea id="details" rows="5" placeholder="Share a few brief details about the learning experience, your raw content assets, or project goals..." class="w-full bg-white border border-gray-200 p-3 text-sm rounded-none focus:outline-none focus:border-black transition-colors resize-none" required></textarea>
-                </div>
+                </form>
 
-                <button type="submit" class="inline-block bg-black text-white px-8 py-3 text-sm font-medium hover:bg-gray-800 transition-colors">
-                    Send Brief
-                </button>
+                <!-- Sidebar Box -->
+                <aside class="md:col-span-1 space-y-8 bg-gray-50 border border-gray-200 p-8">
+                    <div>
+                        <h2 class="font-mono text-xs uppercase tracking-wider text-gray-500 mb-2">Direct Channel</h2>
+                        <p class="text-xs text-gray-600 leading-relaxed">Prefer secure or open email formats? Skip this panel and query me anytime at:</p>
+                        <a href="mailto:leonhayes100@gmail.com" class="text-sm font-bold text-black block mt-2 hover:text-gray-600 transition-colors">leonhayes100@gmail.com</a>
+                    </div>
+                    
+                    <div class="border-t border-gray-200 pt-6">
+                        <h2 class="font-mono text-xs uppercase tracking-wider text-gray-500 mb-2">Contract Guidelines</h2>
+                        <ul class="text-xs text-gray-600 space-y-2 leading-relaxed">
+                            <li>• Fixed-price asset sprint quotes only</li>
+                            <li>• 100% remote asynchronous coordination</li>
+                            <li>• Zero Storyline or Rise module overhauls</li>
+                        </ul>
+                    </div>
+                </aside>
 
-            </form>
+            </div>
+        </main>
 
-            <aside class="md:col-span-1 space-y-8 bg-gray-50 border border-gray-200 p-8 h-fit">
-                <div>
-                    <h3 class="font-mono text-xs uppercase tracking-wider text-gray-400 mb-2">Direct Channel</h3>
-                    <p class="text-sm">Prefer secure or open email formats? Skip this panel and query me anytime at:</p>
-                    <a href="mailto:your@email.com" class="text-sm font-bold block mt-2 hover:text-gray-600 transition-colors">leonhayes100@gmail.com</a>
-                </div>
-                
-                <div class="border-t border-gray-200 pt-6">
-                    <h3 class="font-mono text-xs uppercase tracking-wider text-gray-400 mb-2">Contract Guidelines</h3>
-                    <ul class="text-xs text-gray-600 space-y-2">
-                        <li>• Fixed-price asset sprint quotes only</li>
-                        <li>• 100% remote asynchronous coordination</li>
-                        <li>• Zero Storyline or Rise module overhauls</li>
-                    </ul>
-                </div>
-            </aside>
+        <!-- Footer -->
+        <footer class="mt-24 pt-8 border-t border-gray-200 text-xs flex justify-between items-center">
+            <p>&copy; 2026 Leon Hayes. All rights reserved.</p>
+            <a href="#" class="border border-black px-3 py-1 font-medium hover:bg-black hover:text-white transition-all">
+                Back to Top &uarr;
+            </a>
+        </footer>
 
-        </div>
-    </main>
-
-    <footer class="mt-24 pt-8 border-t border-gray-200 text-xs flex justify-between items-center">
-        <p>&copy; 2026 Leon Hayes. All rights reserved.</p>
-        <a href="#" class="border border-black px-3 py-1 font-medium hover:bg-black hover:text-white transition-all">
-            Back to Top &uarr;
-        </a>
-    </footer>
+    </div>
 
 </body>
 </html>

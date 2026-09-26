@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - Instructional Designer Portfolio</title>
+    <title>About — Leon Hayes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       html {
@@ -15,155 +15,138 @@
       }
     </style>
   </head>
-  <body class="bg-white text-black p-4 md:p-8 max-w-7xl mx-auto">
-    <header class="mb-12">
-      <nav class="flex justify-between items-center">
-        <a
-          href="index.html"
-          class="font-bold hover:text-gray-600 transition-colors"
-          >← Back to Portfolio</a
-        >
-        <span class="text-sm font-mono text-gray-500">About Section</span>
-      </nav>
-    </header>
+  <body class="bg-white text-black min-h-screen">
 
-    <main class="w-full space-y-16">
-      <!-- TOP HERO SECTION: Left Column (Bio & Pic) | Right Column (Experience & Education Card) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+    <!-- Main Container Constrained to Max 1200px -->
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8 py-6 md:py-10">
+
+            <!-- Top Navigation Header -->
+      <header class="flex justify-between items-center mb-16 border-b border-gray-100 pb-6">
+        <a href="index.html" class="text-lg md:text-xl font-bold tracking-normal text-black hover:text-gray-600 transition-colors flex items-center space-x-2">
+    <span class="text-base font-normal">&larr;</span>
+    <span>Back to Portfolio</span>
+</a>
+
+        <nav class="flex space-x-8 text-sm font-medium items-center">
+          <a href="index.html#work" class="hover:text-gray-600 transition-colors py-1">Work</a>
+          <a href="lab.html" class="hover:text-gray-600 transition-colors py-1">Lab</a>
+          <a href="about.html" class="font-bold text-black border-b-2 border-black py-1">About</a>
+        </nav>
+      </header>
+
+
+      <main class="w-full space-y-16">
+        <!-- TOP HERO SECTION: Left Column (Bio & Pic) | Right Column (Experience & Education Card) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          
+          <!-- LEFT COLUMN: Heading, Selfie, Bio, Availability -->
+          <div class="space-y-4">
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-3">
+               Hi, I'm Leon.
+            </h1>
+            <img
+              src="Images/ArchSelfie.jpeg"
+              alt="Leon selfie in front of arch"
+              class="max-h-96 w-auto border border-gray-200"
+            />
+            <p class="text-base text-gray-600 leading-relaxed pt-2">
+              Denver based designer with 10+ years of experience creating engaging
+              learning experiences for diverse users. I specialize in translating
+              complex challenges into user-centered design solutions.
+            </p>
+            <div class="border-l-2 border-black pl-3 py-0.5 mt-2">
+  <p class="text-xs font-semibold text-black tracking-tight leading-snug">
+    Available for agile, short-term contract work and freelance sprints (1–4 weeks).
+  </p>
+</div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: Experience & Education Frame -->
+          <div>
+            <div class="bg-gray-50 border border-gray-200 p-6 space-y-6">
+              
+              <!-- Experience -->
+              <div>
+                <h2 class="text-xs font-mono text-gray-500 uppercase tracking-wider mb-4">
+                  Experience
+                </h2>
+                <div class="space-y-4 border-b border-gray-200 pb-6">
+                  <div>
+                    <h3 class="font-bold text-sm text-black">Instructional Content Developer</h3>
+                    <p class="text-xs text-gray-500 mt-0.5">
+                      Rocky Mountain College of Art + Design | 2026-Present
+                    </p>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-sm text-black">UX Design Apprentice</h3>
+                    <p class="text-xs text-gray-500 mt-0.5">
+                      Tech Fleet | 2025-2026
+                    </p>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-sm text-black">Elementary Teacher</h3>
+                    <p class="text-xs text-gray-500 mt-0.5">
+                      Denver Public Schools | 2015-2026
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education -->
+              <div>
+                <h2 class="text-xs font-mono text-gray-500 uppercase tracking-wider mb-4">
+                  Education
+                </h2>
+                <div class="space-y-4 mb-6">
+                  <div>
+                    <h3 class="font-bold text-sm text-black">UX/UI Design Certificate</h3>
+                    <p class="text-xs text-gray-500 mt-0.5">
+                      University of Denver - Denver, CO | 2025
+                    </p>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-sm text-black">Master of Arts - Elementary Ed. (MA)</h3>
+                    <p class="text-xs text-gray-500 mt-0.5">
+                      Relay Graduate School of Education - New York, NY | 2018
+                    </p>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-sm text-black">Bachelor of Fine Arts - Painting (BFA)</h3>
+                    <p class="text-xs text-gray-500 mt-0.5">
+                      Metropolitan State University of Denver - Denver, CO | 2013
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="#"
+                class="block text-center bg-black text-white px-4 py-2.5 text-xs font-medium hover:bg-gray-800 transition-colors"
+              >
+                Download Full CV
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+
         
-        <!-- LEFT COLUMN: Heading, Selfie, Bio, Availability -->
-        <div class="space-y-4">
-          <h1 class="text-xl md:text-2xl font-bold tracking-tight">
-            Hi. I'm Leon.
-          </h1>
-          <img
-            src="Images/ArchSelfie.jpeg"
-            alt="Leon selfie in front of arch"
-            class="max-h-96 w-auto border border-gray-200 transition-transform group-hover:scale-[0.99]"
-          />
-          <p class="text-base text-gray-600 max-w-md pt-2">
-            Denver based designer with 10+ years of experience creating engaging
-            learning experiences for diverse users. I specialize in translating
-            complex challenges into user-centered design solutions.
-          </p>
-          <p class="text-xs text-gray-600">
-            Available for agile, short-term contract work and freelance
-            sprints (1–4 weeks).
-          </p>
-        </div>
 
-        <!-- RIGHT COLUMN: Experience & Education Frame -->
-        <div>
-          <div class="bg-gray-50 border border-gray-200 p-6 space-y-6">
-            
-            <!-- Experience -->
-            <div>
-              <h2 class="text-sm font-mono text-gray-500 uppercase mb-4">
-                Experience
-              </h2>
-              <div class="space-y-4 border-b border-gray-200 pb-6">
-                <div>
-                  <h4 class="font-bold text-sm">Instructional Content Developer</h4>
-                  <p class="text-xs text-gray-500">
-                    Rocky Mountain College of Art + Design | 2026-Present
-                  </p>
-                </div>
-                <div>
-                  <h4 class="font-bold text-sm">UX Design Apprentice</h4>
-                  <p class="text-xs text-gray-500">
-                    Tech Fleet | 2025-2026
-                  </p>
-                </div>
-                <div>
-                  <h4 class="font-bold text-sm">Elementary Teacher</h4>
-                  <p class="text-xs text-gray-500">
-                    Denver Public Schools | 2015-2026
-                  </p>
-                </div>
-              </div>
-            </div>
+      </main>
 
-            <!-- Education -->
-            <div>
-              <h2 class="text-sm font-mono text-gray-500 uppercase mb-4">
-                Education
-              </h2>
-              <div class="space-y-4 mb-6">
-                <div>
-                  <h4 class="font-bold text-sm">UX/UI Design Certificate</h4>
-                  <p class="text-xs text-gray-500">
-                    University of Denver - Denver, CO | 2025
-                  </p>
-                </div>
-                <div>
-                  <h4 class="font-bold text-sm">Master of Arts - Elementary Ed. (MA)</h4>
-                  <p class="text-xs text-gray-500">
-                    Relay Graduate School of Education - New York, NY | 2018
-                  </p>
-                </div>
-                <div>
-                  <h4 class="font-bold text-sm">Bachelor of Fine Arts - Painting (BFA)</h4>
-                  <p class="text-xs text-gray-500">
-                    Metropolitan State University of Denver - Denver, CO | 2013
-                  </p>
-                </div>
-              </div>
-            </div>
+      <!-- Footer -->
+      <footer class="mt-24 pt-8 border-t border-gray-200 text-xs flex justify-between items-center">
+        <p>&copy; 2026 Leon Hayes. All rights reserved.</p>
+        <a
+          href="#"
+          class="border border-black px-3 py-1 font-medium hover:bg-black hover:text-white transition-all"
+        >
+          Back to Top &uarr;
+        </a>
+      </footer>
 
-            <a
-              href="#"
-              class="block text-center bg-black text-white px-4 py-2.5 text-xs font-medium hover:bg-gray-800 transition-colors"
-            >
-              Download Full CV
-            </a>
-
-          </div>
-        </div>
-
-      </div>
-
-      <!-- BOTTOM SECTION: The Toolkit -->
-      <section class="border-t border-gray-200 pt-8 space-y-4">
-        <h3 class="font-bold text-sm uppercase tracking-wider text-gray-500">
-          The Toolkit
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div>
-            <h4 class="font-bold text-base mb-1">Custom HTML & Web</h4>
-            <p class="text-xs text-gray-600">
-              Bespoke interactive graphics, calculators, and custom CSS
-              setups built natively for the web.
-            </p>
-          </div>
-          <div>
-            <h4 class="font-bold text-base mb-1">H5P Multimedia</h4>
-            <p class="text-xs text-gray-600">
-              Dynamic branching scenarios, interactive videos, and granular
-              micro-learning elements.
-            </p>
-          </div>
-          <div>
-            <h4 class="font-bold text-base mb-1">Motion Graphics</h4>
-            <p class="text-xs text-gray-600">
-              Premium video titles, instructional content bumpers, and sleek
-              Figma micro-animations.
-            </p>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer
-      class="mt-24 pt-8 border-t border-gray-200 text-xs flex justify-between items-center"
-    >
-      <p>&copy; 2026 Leon Hayes. All rights reserved.</p>
-      <a
-        href="#"
-        class="border border-black px-3 py-1 font-medium hover:bg-black hover:text-white transition-all"
-      >
-        Back to Top &uarr;
-      </a>
-    </footer>
+    </div>
   </body>
 </html>
