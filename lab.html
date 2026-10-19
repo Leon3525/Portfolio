@@ -175,6 +175,74 @@
             </div>
         </section>
 
+         <!-- Interactive Examples Section -->
+<section class="space-y-8 border-t border-gray-200 pt-16" aria-labelledby="interactive-examples-heading">
+    <div class="max-w-2xl">
+        <h2 id="interactive-examples-heading" class="text-2xl font-bold tracking-tight mb-3">Interactive Examples</h2>
+        <p class="text-base text-gray-600 leading-relaxed">
+            Explore live, functional builds of the custom component assets deployed within the course environment.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <!-- Example 1 -->
+        <div class="border border-gray-200 bg-gray-50 p-6 space-y-4">
+            <div>
+                <h3 class="font-bold text-base text-black mb-1">01 / Virtual Manipulatives</h3>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                    Making abstract content concrete with tangible demonstrations that show rather than tell. BLENDER WIDGET
+                </p>
+            </div>
+            
+            <!-- Interactive Asset Container / iFrame Wrap -->
+            <div class="bg-white border border-gray-200 aspect-video w-full flex items-center justify-center relative overflow-hidden">
+                <!-- Replace iframe src with your live asset or H5P build URL -->
+                <iframe 
+                    src="about:blank" 
+                    title="Interactive Carousel Component Demo" 
+                    class="w-full h-full border-0"
+                    loading="lazy">
+                </iframe>
+                <!-- Fallback Placeholder Label (Visible if src is blank) -->
+                <span class="absolute text-gray-400 font-mono text-xs pointer-events-none">[Embed 1: Live Carousel Asset / iFrame]</span>
+            </div>
+            
+            <div class="flex justify-between items-center text-xs font-mono text-gray-500 pt-2 border-t border-gray-200">
+                <span>Accessibility: WCAG 2.1 AA</span>
+                <span>Type: Bootstrap / JS</span>
+            </div>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="border border-gray-200 bg-gray-50 p-6 space-y-4">
+            <div>
+                <h3 class="font-bold text-base text-black mb-1">02 / Toggle Switch</h3>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                    Custom-coded decision widget featuring structured ARIA landmarks and full screen-reader announcements for active state changes.
+                </p>
+            </div>
+            
+            <!-- Interactive Asset Container / iFrame Wrap -->
+            <div class="bg-white border border-gray-200 aspect-video w-full flex items-center justify-center relative overflow-hidden">
+                <!-- Replace iframe src with your live asset or H5P build URL -->
+                <iframe 
+                    src="about:blank" 
+                    title="Accessible Scenario Module Demo" 
+                    class="w-full h-full border-0"
+                    loading="lazy">
+                </iframe>
+                <!-- Fallback Placeholder Label (Visible if src is blank) -->
+                <span class="absolute text-gray-400 font-mono text-xs pointer-events-none">[Embed 2: Live Scenario Asset / iFrame]</span>
+            </div>
+
+            <div class="flex justify-between items-center text-xs font-mono text-gray-500 pt-2 border-t border-gray-200">
+                <span>Accessibility: Screen-Reader Optimized</span>
+                <span>Type: Custom HTML/ARIA</span>
+            </div>
+        </div>
+    </div>
+</section>
+
         <!-- Footer -->
         <footer class="mt-24 pt-8 border-t border-gray-200 text-xs flex justify-between items-center">
             <p>&copy; 2026 Leon Hayes. Built with curiosity.</p>
