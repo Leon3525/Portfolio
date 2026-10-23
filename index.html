@@ -19,6 +19,7 @@
   <body class="bg-white text-black min-h-screen">
     <!-- Main Container Constrained to Max 1200px -->
     <div class="max-w-[1200px] mx-auto px-4 md:px-8 py-4 md:py-8">
+      
       <!-- Top Navigation Header -->
       <header class="border-b border-gray-100 pb-4 mb-10 md:mb-16">
         <div class="flex justify-between items-center">
@@ -113,56 +114,71 @@
         </nav>
       </header>
 
-      <!-- Hero Section -->
-      <section class="mb-20 max-w-2xl">
-        <h1
-          class="text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-tight"
-        >
-          Say
-          <span class="italic font-serif font-normal text-gray-700"
-            >goodbye</span
+      <!-- Primary Main Content Region -->
+      <main class="space-y-20">
+
+        <!-- Hero Section -->
+        <section class="max-w-2xl space-y-6">
+          <h1
+            class="text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-tight"
           >
-          to boring eLearning!
-        </h1>
+            Say
+            <span class="italic font-serif font-normal text-gray-700"
+              >goodbye</span
+            >
+            to boring eLearning!
+          </h1>
 
-        <p class="text-base md:text-lg text-gray-700 mb-8 leading-relaxed">
-          Brand-driven interactive design that inspires your learners. I
-          transform static course material into unforgettable learning
-          experiences with custom multimedia.
-        </p>
-
-        <a
-          href="hit-me-up.html"
-          class="inline-block bg-black text-white px-7 py-3.5 text-base font-medium hover:bg-gray-800 transition-colors"
-        >
-          Hit Me Up
-        </a>
-      </section>
-
-      <!-- Work Showcase Section -->
-      <section id="work" class="border-t border-gray-200 pt-16 mb-24">
-        <div class="max-w-2xl mb-12">
-          <h2
-            class="text-xs md:text-sm font-mono text-gray-500 uppercase tracking-wider mb-2"
-          >
-            Real Projects
-          </h2>
           <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-            Measurable outcomes. See how I turn complex problems into intuitive
-            experiences that drive results.
+            Brand-driven interactive design that inspires your learners. I
+            transform static course material into unforgettable learning
+            experiences with custom multimedia.
           </p>
-        </div>
 
-        <!-- Project Cards Grid -->
-        <main class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-          <!-- Flagship Case Study Card (Full Width, Vertically Stacked) -->
-          <article class="md:col-span-2 border-b border-gray-200 pb-12">
+          <!-- Availability Indicator -->
+          <div class="flex items-center space-x-2 pt-1">
+            <span
+              class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0"
+            ></span>
+            <p
+              class="text-xs md:text-sm font-mono text-gray-700 uppercase tracking-wider"
+            >
+              Available for short-term contract work (1–6 weeks)
+            </p>
+          </div>
+
+          <div>
+            <a
+              href="hit-me-up.html"
+              class="inline-block bg-black text-white px-7 py-3.5 text-base font-medium hover:bg-gray-800 transition-colors"
+            >
+              Hit Me Up
+            </a>
+          </div>
+        </section>
+
+        <!-- Work Showcase Section -->
+        <section id="work" class="border-t border-gray-200 pt-16">
+          <div class="max-w-2xl mb-12">
+            <h2
+              class="text-xs md:text-sm font-mono text-gray-500 uppercase tracking-wider mb-2"
+            >
+              Real Projects
+            </h2>
+            <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+              Measurable outcomes. See how I turn complex problems into intuitive
+              experiences that drive results.
+            </p>
+          </div>
+
+          <!-- Flagship Case Study 1: Modular Course Component System -->
+          <article>
             <div class="space-y-6">
               <!-- Interactive Hero Slider Frame -->
               <div
                 class="relative w-full aspect-[16/9] bg-gray-100 border border-gray-200 rounded-sm overflow-hidden select-none group shadow-sm"
               >
-                <!-- LAYER 2: AFTER IMAGE (Base / Underneath - Transformed State) -->
+                <!-- LAYER 2: AFTER IMAGE -->
                 <div
                   class="absolute inset-0 w-full h-full bg-gray-50 flex items-center justify-center"
                 >
@@ -173,7 +189,7 @@
                   />
                 </div>
 
-                <!-- LAYER 1: BEFORE IMAGE (Clipped Overlay - Initial State) -->
+                <!-- LAYER 1: BEFORE IMAGE -->
                 <div
                   id="card-before-layer"
                   class="absolute inset-0 w-full h-full bg-white flex items-center justify-center border-r border-black/20"
@@ -295,218 +311,85 @@
               </a>
             </div>
           </article>
+        </section>
 
-          <!-- Card Slider Script -->
-          <script>
-            function updateCardSlider(val) {
-              const beforeLayer = document.getElementById("card-before-layer");
-              const handle = document.getElementById("card-slider-handle");
-              const dotLeft = document.getElementById("card-dot-left");
-              const dotRight = document.getElementById("card-dot-right");
-
-              const insetRight = 100 - val;
-              if (beforeLayer)
-                beforeLayer.style.clipPath = `inset(0 ${insetRight}% 0 0)`;
-              if (handle) handle.style.left = `${val}%`;
-
-              if (dotLeft && dotRight) {
-                if (val > 50) {
-                  dotLeft.classList.remove("bg-black");
-                  dotLeft.classList.add("bg-gray-300");
-                  dotRight.classList.remove("bg-gray-300");
-                  dotRight.classList.add("bg-black");
-                } else {
-                  dotLeft.classList.remove("bg-gray-300");
-                  dotLeft.classList.add("bg-black");
-                  dotRight.classList.remove("bg-black");
-                  dotRight.classList.add("bg-gray-300");
-                }
-              }
-            }
-          </script>
-
-          <!-- Project 1 Card -->
-          <article>
-            <a
-              href="bxobs-case-study.html"
-              class="group block h-full flex flex-col justify-between"
-            >
-              <div>
-                <img
-                  src="Images/BxObsThumbnail@3x.png"
-                  alt="BxObs Assessment Assistant preview"
-                  class="aspect-[4/3] w-full object-cover border border-gray-200 mb-6 transition-transform group-hover:scale-[0.99]"
-                />
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span
-                    class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
-                    >2025</span
-                  >
-                  <span
-                    class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
-                    >Figma</span
-                  >
-                  <span
-                    class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
-                    >UX/UI</span
-                  >
-                  <span
-                    class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
-                    >Prototype</span
-                  >
-                </div>
-                <h3
-                  class="text-lg md:text-xl font-bold group-hover:text-gray-600 transition-colors mb-3"
-                >
-                  BxObs Assessment Assistant
-                </h3>
-                <p
-                  class="text-base md:text-lg text-gray-700 leading-relaxed mb-8"
-                >
-                  <strong>Observation tool</strong> for psychologists. Designed
-                  in collaboration with <strong>Cerebral Code</strong>. Built in
-                  Figma using Material Design 3.
-                </p>
-              </div>
-
-              <div class="mt-auto space-y-6">
-                <!-- Outcome Line -->
-                <div
-                  class="border-l-2 border-black pl-3 py-0.5 flex items-start space-x-2"
-                >
-                  <p
-                    class="text-xs md:text-sm font-semibold text-black tracking-tight leading-snug"
-                  >
-                    20% Efficiency Increase from Better Data Discovery
-                  </p>
-                </div>
-
-                <!-- Styled Button -->
-                <div>
-                  <span
-                    class="inline-block bg-black text-white px-6 py-2.5 text-sm md:text-base font-medium group-hover:bg-gray-800 transition-colors"
-                  >
-                    View Case Study &rarr;
-                  </span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Project 2 Card -->
-          <article>
-            <a
-              href="naloxone-case-study.html"
-              class="group block h-full flex flex-col justify-between"
-            >
-              <div>
-                <div
-                  class="bg-gray-100 aspect-[4/3] w-full flex items-center justify-center border border-gray-200 mb-6 transition-transform group-hover:scale-[0.99]"
-                >
-                  <span class="text-gray-400 font-mono text-sm md:text-base"
-                    >[Project Placeholder]</span
-                  >
-                </div>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span
-                    class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
-                    >2026</span
-                  >
-                  <span
-                    class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
-                    >Articulate</span
-                  >
-                  <span
-                    class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
-                    >LXD</span
-                  >
-                  <span
-                    class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
-                    >eLearning</span
-                  >
-                </div>
-                <h3
-                  class="text-lg md:text-xl font-bold group-hover:text-gray-600 transition-colors mb-3"
-                >
-                  Emergency Response Training Naloxone (Narcan®)
-                </h3>
-                <p
-                  class="text-base md:text-lg text-gray-700 leading-relaxed mb-8"
-                >
-                Practical <strong>eLearning course</strong>
-                  preparing learners for real emergency situations where
-                  timely intervention can save lives. Built in Articulate Rise
-                  with integrated Storyline blocks.
-                </p>
-              </div>
-
-              <div class="mt-auto space-y-6">
-                <!-- Outcome Line -->
-                <div
-                  class="border-l-2 border-black pl-3 py-0.5 flex items-start space-x-2"
-                >
-                  <p
-                    class="text-xs md:text-sm font-semibold text-black tracking-tight leading-snug"
-                  >
-                    100% staff participation, strengthening organizational
-                    consistency in safety and care practices
-                  </p>
-                </div>
-
-                <!-- Styled Button -->
-                <div>
-                  <span
-                    class="inline-block bg-black text-white px-6 py-2.5 text-sm md:text-base font-medium group-hover:bg-gray-800 transition-colors"
-                  >
-                    View Case Study &rarr;
-                  </span>
-                </div>
-              </div>
-            </a>
-          </article>
-        </main>
-
-        <!-- BOTTOM SECTION: The Toolkit -->
-        <section class="border-t border-gray-200 pt-12 space-y-6">
+        <!-- SECTION: The Toolkit -->
+        <section
+          id="toolkit"
+          aria-labelledby="toolkit-heading"
+          class="border-t border-gray-200 pt-16 space-y-6"
+        >
           <h2
+            id="toolkit-heading"
             class="text-xs md:text-sm font-mono text-gray-500 uppercase tracking-wider"
           >
             The Toolkit
           </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            <div>
-              <h3 class="font-bold text-lg md:text-xl mb-2">
-                Custom HTML & Web
-              </h3>
-              <p class="text-sm md:text-base text-gray-600 leading-relaxed">
-                Bespoke interactive graphics, calculators, and custom CSS setups
-                built natively for the web.
-              </p>
-            </div>
-            <div>
-              <h3 class="font-bold text-lg md:text-xl mb-2">H5P Multimedia</h3>
-              <p class="text-sm md:text-base text-gray-600 leading-relaxed">
-                Dynamic branching scenarios, interactive videos, and granular
-                micro-learning elements.
-              </p>
-            </div>
-            <div>
-              <h3 class="font-bold text-lg md:text-xl mb-2">Motion Graphics</h3>
-              <p class="text-sm md:text-base text-gray-600 leading-relaxed">
-                Premium video titles, instructional content bumpers, and sleek
-                Figma micro-animations.
-              </p>
-            </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
+            <!-- Toolkit Item 1 -->
+            <article
+              class="bg-gray-50 border border-gray-200 rounded-sm p-6 md:p-8 space-y-3 flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="font-bold text-lg md:text-xl mb-2 text-black">
+                  Custom HTML &amp; Web
+                </h3>
+                <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                  Bespoke interactive graphics, calculators, and custom CSS
+                  setups built natively for the web.
+                </p>
+              </div>
+            </article>
+
+            <!-- Toolkit Item 2 -->
+            <article
+              class="bg-gray-50 border border-gray-200 rounded-sm p-6 md:p-8 space-y-3 flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="font-bold text-lg md:text-xl mb-2 text-black">
+                  H5P Multimedia
+                </h3>
+                <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                  Dynamic branching scenarios, interactive videos, and granular
+                  micro-learning elements.
+                </p>
+              </div>
+            </article>
+
+            <!-- Toolkit Item 3 -->
+            <article
+              class="bg-gray-50 border border-gray-200 rounded-sm p-6 md:p-8 space-y-3 flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="font-bold text-lg md:text-xl mb-2 text-black">
+                  Motion Graphics
+                </h3>
+                <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+                  Premium video titles, instructional content bumpers, and sleek
+                  Figma micro-animations.
+                </p>
+              </div>
+            </article>
           </div>
         </section>
 
-        <!-- Value Proposition / Accordion Grid -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-12 my-12 items-start border-t border-gray-200 pt-16"
+        <!-- SECTION: Value Proposition / Accordion Grid -->
+        <section
+          id="about-summary"
+          aria-labelledby="value-prop-heading"
+          class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start border-t border-gray-200 pt-16"
         >
           <!-- Left Column: Text Content -->
           <div class="space-y-4">
-            <h2 class="text-xl md:text-2xl font-bold tracking-tight">
+            <p
+              class="text-xs md:text-sm font-mono text-gray-500 uppercase tracking-wider mb-2"
+            >
+              Value
+            </p>
+            <h2
+              id="value-prop-heading"
+              class="text-xl md:text-2xl font-bold tracking-tight"
+            >
               What makes me different?
             </h2>
             <p class="text-base md:text-lg text-gray-700 leading-relaxed">
@@ -651,12 +534,172 @@
               </p>
             </details>
           </div>
-        </div>
+        </section>
+
+        <!-- SECTION: Secondary Project Cards 2-Column Grid -->
+        <section
+          id="secondary-projects"
+          aria-label="Secondary Case Studies"
+          class="border-t border-gray-200 pt-16"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <!-- Project Card 1: Motion Graphic Template Design -->
+            <article>
+              <a
+                href="mogrt-case-study.html"
+                class="group block h-full flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="bg-gray-100 aspect-[4/3] w-full flex items-center justify-center border border-gray-200 mb-6 transition-transform group-hover:scale-[0.99]"
+                  >
+                    <span
+                      class="text-gray-400 font-mono text-sm md:text-base text-center px-4"
+                      >[Motion Graphic Template Placeholder]</span
+                    >
+                  </div>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span
+                      class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
+                      >2026</span
+                    >
+                    <span
+                      class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
+                      >MOGRT</span
+                    >
+                    <span
+                      class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
+                      >After Effects</span
+                    >
+                    <span
+                      class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
+                      >Premiere Pro</span
+                    >
+                  </div>
+                  <h3
+                    class="text-lg md:text-xl font-bold group-hover:text-gray-600 transition-colors mb-3"
+                  >
+                    Motion Graphic Template Design
+                  </h3>
+                  <p
+                    class="text-base md:text-lg text-gray-700 leading-relaxed mb-8"
+                  >
+                    <strong>Reusable motion graphics toolkit</strong> engineered
+                    to standardize video production across course modules.
+                    Features customizable title cards, lower thirds, callout
+                    overlays, and animated transition assets built for rapid
+                    delivery.
+                  </p>
+                </div>
+
+                <div class="mt-auto space-y-6">
+                  <!-- Outcome Line -->
+                  <div
+                    class="border-l-2 border-black pl-3 py-0.5 flex items-start space-x-2"
+                  >
+                    <p
+                      class="text-xs md:text-sm font-semibold text-black tracking-tight leading-snug"
+                    >
+                      Accelerated post-production turnarounds while maintaining
+                      institutional visual brand standards
+                    </p>
+                  </div>
+
+                  <!-- Styled Button -->
+                  <div>
+                    <span
+                      class="inline-block bg-black text-white px-6 py-2.5 text-sm md:text-base font-medium group-hover:bg-gray-800 transition-colors"
+                    >
+                      View Mini Case Study &rarr;
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Project Card 2: Emergency Response Training Naloxone (Narcan®) -->
+            <article>
+              <a
+                href="naloxone-case-study.html"
+                class="group block h-full flex flex-col justify-between"
+              >
+                <div>
+                  <img
+                    src="Images/naloxone-card-unsplash.jpg"
+                    alt="Emergency Response Training Naloxone (Narcan®) course preview"
+                    class="aspect-[4/3] w-full object-fill border border-gray-200 mb-6 transition-transform group-hover:scale-[0.99]"
+                  />
+
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span
+                      class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
+                      >2026</span
+                    >
+                    <span
+                      class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
+                      >Articulate</span
+                    >
+                    <span
+                      class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
+                      >LXD</span
+                    >
+                    <span
+                      class="border border-black px-2.5 py-1 text-xs uppercase font-bold tracking-wider"
+                      >eLearning</span
+                    >
+                  </div>
+                  <h3
+                    class="text-lg md:text-xl font-bold group-hover:text-gray-600 transition-colors mb-3"
+                  >
+                    Emergency Response Training Naloxone (Narcan®)
+                  </h3>
+                  <p
+                    class="text-base md:text-lg text-gray-700 leading-relaxed mb-8"
+                  >
+                    Practical <strong>eLearning course</strong> preparing learners
+                    for real emergency situations where timely intervention can
+                    save lives. Built in Articulate Rise with integrated Storyline
+                    blocks.
+                  </p>
+                </div>
+
+                <div class="mt-auto space-y-6">
+                  <!-- Outcome Line -->
+                  <div
+                    class="border-l-2 border-black pl-3 py-0.5 flex items-start space-x-2"
+                  >
+                    <p
+                      class="text-xs md:text-sm font-semibold text-black tracking-tight leading-snug"
+                    >
+                      100% staff participation, strengthening organizational
+                      consistency in safety and care practices
+                    </p>
+                  </div>
+
+                  <!-- Styled Button -->
+                  <div>
+                    <span
+                      class="inline-block bg-black text-white px-6 py-2.5 text-sm md:text-base font-medium group-hover:bg-gray-800 transition-colors"
+                    >
+                      View Case Study &rarr;
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+          </div>
+        </section>
 
         <!-- TEAM PROJECTS SECTION -->
-        <div class="border-t border-gray-200 pt-16 mb-12">
+        <section
+          class="border-t border-gray-200 pt-16"
+          aria-labelledby="team-projects-heading"
+        >
           <div class="max-w-2xl mb-12">
             <h2
+              id="team-projects-heading"
               class="text-xs md:text-sm font-mono text-gray-500 uppercase tracking-wider mb-2"
             >
               RMCAD Team Projects
@@ -667,18 +710,22 @@
             </p>
           </div>
 
-          <!-- Team Projects Grid (Full Width Flagship Layout) -->
+          <!-- Team Projects Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <article class="md:col-span-2 border-b border-gray-200 pb-12">
+            <article class="md:col-span-2 pb-12">
               <div class="space-y-6">
-                <!-- 16:9 Image Aspect Frame -->
-                <div class="relative w-full aspect-[16/9] rounded-sm overflow-hidden group shadow-sm">
+                <!-- 16:9 Linked Image Aspect Frame -->
+                <a
+                  href="video-production-case-study.html"
+                  class="relative w-full aspect-[16/9] rounded-sm overflow-hidden group block shadow-sm focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                  aria-label="View Documentary-Style Educational Video Production Case Study"
+                >
                   <img
                     src="Images/Camera_CSM.jpeg"
                     alt="Video camera on a tripod framing an on-camera interview in an art gallery space"
-                    class="w-full h-full object-cover object-[center_20%] transition-transform group-hover:scale-[0.99]"
+                    class="w-full h-full object-cover object-[center_20%] transition-transform duration-300 group-hover:scale-[0.99]"
                   />
-                </div>
+                </a>
 
                 <!-- Card Content Block -->
                 <a
@@ -713,9 +760,7 @@
                   </h3>
 
                   <!-- Description -->
-                  <p
-                    class="text-base md:text-lg text-gray-700 leading-relaxed"
-                  >
+                  <p class="text-base md:text-lg text-gray-700 leading-relaxed">
                     <strong>Collaborative field production</strong> bringing
                     academic theory into real-world practice through executive
                     interviews at Denver cultural institutions, agile
@@ -748,12 +793,58 @@
               </div>
             </article>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <!-- FINAL CTA CONTACT BANNER -->
+        <section
+          class="space-y-6 border-t border-gray-200 pt-16 pb-12"
+          aria-labelledby="cta-heading"
+        >
+          <div
+            class="bg-gray-50 border border-gray-200 p-8 md:p-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 rounded-sm"
+          >
+            <div class="space-y-3 max-w-xl">
+              <div class="flex items-center space-x-2">
+                <span
+                  class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0"
+                ></span>
+                <span
+                  class="text-xs md:text-sm font-mono text-gray-500 uppercase tracking-wider"
+                  >Available for short-term contract work (1–6 weeks)</span
+                >
+              </div>
+              <h2
+                id="cta-heading"
+                class="text-xl md:text-2xl font-bold tracking-tight text-black"
+              >
+                Need custom multimedia or a
+                <span class="italic font-serif font-normal text-gray-700"
+                  >quick-turnaround LXD build</span
+                >?
+              </h2>
+              <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                Whether you need interactive web components, H5P media assets,
+                or custom motion graphics built on quick timelines, let's
+                collaborate to turn static course materials into engaging
+                learning experiences.
+              </p>
+            </div>
+
+            <a
+              href="hit-me-up.html"
+              class="inline-flex items-center space-x-2 bg-black text-white px-6 py-3 text-sm md:text-base font-medium hover:bg-gray-800 transition-colors shrink-0 rounded-sm focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+            >
+              <span>Hit Me Up</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </section>
+
+      </main>
 
       <!-- Footer -->
       <footer
-        class="mt-24 pt-8 border-t border-gray-200 text-xs md:text-sm flex justify-between items-center"
+        class="pt-8 border-t border-gray-200 text-xs md:text-sm flex justify-between items-center"
       >
         <p>&copy; 2026 Leon Hayes. All rights reserved.</p>
         <a
@@ -764,6 +855,35 @@
         </a>
       </footer>
     </div>
+
+    <!-- Interactive Juxtapose Slider Script -->
+    <script>
+      function updateCardSlider(val) {
+        const beforeLayer = document.getElementById("card-before-layer");
+        const handle = document.getElementById("card-slider-handle");
+        const dotLeft = document.getElementById("card-dot-left");
+        const dotRight = document.getElementById("card-dot-right");
+
+        const insetRight = 100 - val;
+        if (beforeLayer)
+          beforeLayer.style.clipPath = `inset(0 ${insetRight}% 0 0)`;
+        if (handle) handle.style.left = `${val}%`;
+
+        if (dotLeft && dotRight) {
+          if (val > 50) {
+            dotLeft.classList.remove("bg-black");
+            dotLeft.classList.add("bg-gray-300");
+            dotRight.classList.remove("bg-gray-300");
+            dotRight.classList.add("bg-black");
+          } else {
+            dotLeft.classList.remove("bg-gray-300");
+            dotLeft.classList.add("bg-black");
+            dotRight.classList.remove("bg-black");
+            dotRight.classList.add("bg-gray-300");
+          }
+        }
+      }
+    </script>
 
     <!-- Mobile Menu Accessible Toggle Script -->
     <script>
